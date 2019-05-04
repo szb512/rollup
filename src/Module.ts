@@ -177,7 +177,7 @@ export default class Module {
 	}[] = [];
 	entryPointsHash: Uint8Array = new Uint8Array(10);
 	excludeFromSourcemap: boolean;
-	execIndex: number = Infinity;
+	execIndex = Infinity;
 	exportAllModules: (Module | ExternalModule)[] = null;
 	exportAllSources: string[] = [];
 	exports: { [name: string]: ExportDescription } = Object.create(null);
@@ -188,10 +188,10 @@ export default class Module {
 	importDescriptions: { [name: string]: ImportDescription } = Object.create(null);
 	importMetas: MetaProperty[] = [];
 	imports = new Set<Variable>();
-	isEntryPoint: boolean = false;
-	isExecuted: boolean = false;
+	isEntryPoint = false;
+	isExecuted = false;
 	isExternal: false;
-	isUserDefinedEntryPoint: boolean = false;
+	isUserDefinedEntryPoint = false;
 	manualChunkAlias: string = null;
 	originalCode: string;
 	originalSourcemap: RawSourceMap | void;
@@ -202,7 +202,7 @@ export default class Module {
 	sourcemapChain: RawSourceMap[];
 	sources: string[] = [];
 	transformAssets: Asset[];
-	usesTopLevelAwait: boolean = false;
+	usesTopLevelAwait = false;
 
 	private ast: Program;
 	private astContext: AstContext;
